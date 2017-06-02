@@ -1,8 +1,13 @@
 %% Tips for good coding
 % //www.mathworks.com/help/matlab/matlab_prog/techniques-for-improving-performance.html?s_tid=doc_12b
 
-% saving figures in a loop
+%% saving varibles in a loop
+for k = 1:10
+        filename = [ 'myDataFile' num2str(k) '.mat' ];
+        save(filename);
+end
 
+%% saving figures in a loop
 for i = 1:10
   figure;
   plot(i, i)
