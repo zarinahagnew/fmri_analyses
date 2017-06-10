@@ -1,0 +1,192 @@
+% sanity check: 
+% a(1)=nanmean(GroupData.pat_std_withintrial_cond1_pre(1,:))
+% a(2)=nanmean(GroupData.pat_std_withintrial_cond1_pre(2,:))
+% a(3)=nanmean(GroupData.pat_std_withintrial_cond1_pre(3,:))
+% a(4)=nanmean(GroupData.pat_std_withintrial_cond1_pre(4,:))
+% a(5)=nanmean(GroupData.pat_std_withintrial_cond1_pre(5,:))
+% a(6)=nanmean(GroupData.pat_std_withintrial_cond1_pre(6,:))
+% nanmean(a)
+% Gp_meanstd_WT.pat_cond1_pre
+% these two should be the same ^^
+
+%GroupData.WT_patC1_pre  is all the 6 patients in one array (is it only
+%good patients?
+ 
+STATS.stdwithin_patHCs_pre_cond1=ttest2(GroupData.WT_patC1_pre, GroupData.WT_HCC1_pre);
+STATS.stdwithin_patHCs_pre_cond2=ttest2(GroupData.WT_patC2_pre, GroupData.WT_HCC2_pre);
+STATS.stdwithin_patHCs_pre_cond3=ttest2(GroupData.WT_patC3_pre, GroupData.WT_HCC3_pre);
+STATS.stdwithin_patHCs_pre_cond4=ttest2(GroupData.WT_patC4_pre, GroupData.WT_HCC4_pre);
+STATS.stdwithin_patHCs_pre_cond5=ttest2(GroupData.WT_patC5_pre, GroupData.WT_HCC5_pre);
+STATS.stdwithin_patHCs_pre_cond6=ttest2(GroupData.WT_patC6_pre, GroupData.WT_HCC6_pre);
+STATS.stdwithin_patHCs_pre_cond7=ttest2(GroupData.WT_patC7_pre, GroupData.WT_HCC7_pre);
+STATS.stdwithin_patHCs_pre_cond8=ttest2(GroupData.WT_patC8_pre, GroupData.WT_HCC8_pre);
+STATS.stdwithin_patHCs_pre_cond9=ttest2(GroupData.WT_patC9_pre, GroupData.WT_HCC9_pre);
+STATS.stdwithin_patHCs_pre_cond10=ttest2(GroupData.WT_patC10_pre, GroupData.WT_HCC10_pre);
+
+STATS.stdwithin_patHCs_post_cond1=ttest2(GroupData.WT_patC1_post, GroupData.WT_HCC1_post);
+STATS.stdwithin_patHCs_post_cond2=ttest2(GroupData.WT_patC2_post, GroupData.WT_HCC2_post);
+STATS.stdwithin_patHCs_post_cond3=ttest2(GroupData.WT_patC3_post, GroupData.WT_HCC3_post);
+STATS.stdwithin_patHCs_post_cond4=ttest2(GroupData.WT_patC4_post, GroupData.WT_HCC4_post);
+STATS.stdwithin_patHCs_post_cond5=ttest2(GroupData.WT_patC5_post, GroupData.WT_HCC5_post);
+STATS.stdwithin_patHCs_post_cond6=ttest2(GroupData.WT_patC6_post, GroupData.WT_HCC6_post);
+STATS.stdwithin_patHCs_post_cond7=ttest2(GroupData.WT_patC7_post, GroupData.WT_HCC7_post);
+STATS.stdwithin_patHCs_post_cond8=ttest2(GroupData.WT_patC8_post, GroupData.WT_HCC8_post);
+STATS.stdwithin_patHCs_post_cond9=ttest2(GroupData.WT_patC9_post, GroupData.WT_HCC9_post);
+STATS.stdwithin_patHCs_post_cond10=ttest2(GroupData.WT_patC10_post, GroupData.WT_HCC10_post);
+
+STATS.stdwithin_patHCs_wholetrial_cond1=ttest2(GroupData.WT_patC1_wholetrial, GroupData.WT_HCC1_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond2=ttest2(GroupData.WT_patC2_wholetrial, GroupData.WT_HCC2_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond3=ttest2(GroupData.WT_patC3_wholetrial, GroupData.WT_HCC3_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond4=ttest2(GroupData.WT_patC4_wholetrial, GroupData.WT_HCC4_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond5=ttest2(GroupData.WT_patC5_wholetrial, GroupData.WT_HCC5_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond6=ttest2(GroupData.WT_patC6_wholetrial, GroupData.WT_HCC6_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond7=ttest2(GroupData.WT_patC7_wholetrial, GroupData.WT_HCC7_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond8=ttest2(GroupData.WT_patC8_wholetrial, GroupData.WT_HCC8_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond9=ttest2(GroupData.WT_patC9_wholetrial, GroupData.WT_HCC9_wholetrial);
+STATS.stdwithin_patHCs_wholetrial_cond10=ttest2(GroupData.WT_patC10_wholetrial, GroupData.WT_HCC10_wholetrial);
+
+%% (4) STATS - comparing noise v clear trials for HC and patients
+% pre
+
+STATS.stdwithin_noise_clear_pre_cond1_HC=ttest2(GroupData.WT_HCC1_pre, GroupData.WT_HCC6_pre);
+STATS.stdwithin_noise_clear_pre_cond2_HC=ttest2(GroupData.WT_HCC2_pre, GroupData.WT_HCC7_pre);
+STATS.stdwithin_noise_clear_pre_cond3_HC=ttest2(GroupData.WT_HCC3_pre, GroupData.WT_HCC8_pre);
+STATS.stdwithin_noise_clear_pre_cond4_HC=ttest2(GroupData.WT_HCC4_pre, GroupData.WT_HCC9_pre);
+STATS.stdwithin_noise_clear_pre_cond5_HC=ttest2(GroupData.WT_HCC5_pre, GroupData.WT_HCC10_pre);
+
+STATS.stdwithin_noise_clear_pre_cond1_pat=ttest2(GroupData.WT_patC1_pre, GroupData.WT_patC6_pre);
+STATS.stdwithin_noise_clear_pre_cond2_pat=ttest2(GroupData.WT_patC2_pre, GroupData.WT_patC7_pre);
+STATS.stdwithin_noise_clear_pre_cond3_pat=ttest2(GroupData.WT_patC3_pre, GroupData.WT_patC8_pre);
+STATS.stdwithin_noise_clear_pre_cond4_pat=ttest2(GroupData.WT_patC4_pre, GroupData.WT_patC9_pre);
+STATS.stdwithin_noise_clear_pre_cond5_pat=ttest2(GroupData.WT_patC5_pre, GroupData.WT_patC10_pre);
+
+% post
+STATS.stdwithin_noise_clear_post_cond1_HC=ttest2(GroupData.WT_HCC1_post, GroupData.WT_HCC6_post);
+STATS.stdwithin_noise_clear_post_cond2_HC=ttest2(GroupData.WT_HCC2_post, GroupData.WT_HCC7_post);
+STATS.stdwithin_noise_clear_post_cond3_HC=ttest2(GroupData.WT_HCC3_post, GroupData.WT_HCC8_post);
+STATS.stdwithin_noise_clear_post_cond4_HC=ttest2(GroupData.WT_HCC4_post, GroupData.WT_HCC9_post);
+STATS.stdwithin_noise_clear_post_cond5_HC=ttest2(GroupData.WT_HCC5_post, GroupData.WT_HCC10_post);
+
+STATS.stdwithin_noise_clear_post_cond1_pat=ttest2(GroupData.WT_patC1_post, GroupData.WT_patC6_post);
+STATS.stdwithin_noise_clear_post_cond2_pat=ttest2(GroupData.WT_patC2_post, GroupData.WT_patC7_post);
+STATS.stdwithin_noise_clear_post_cond3_pat=ttest2(GroupData.WT_patC3_post, GroupData.WT_patC8_post);
+STATS.stdwithin_noise_clear_post_cond4_pat=ttest2(GroupData.WT_patC4_post, GroupData.WT_patC9_post);
+STATS.stdwithin_noise_clear_post_cond5_pat=ttest2(GroupData.WT_patC5_post, GroupData.WT_patC10_post);
+
+% wholetrial
+STATS.stdwithin_noise_clear_wholetrial_cond1_HC=ttest2(GroupData.WT_HCC1_wholetrial, GroupData.WT_HCC6_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond2_HC=ttest2(GroupData.WT_HCC2_wholetrial, GroupData.WT_HCC7_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond3_HC=ttest2(GroupData.WT_HCC3_wholetrial, GroupData.WT_HCC8_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond4_HC=ttest2(GroupData.WT_HCC4_wholetrial, GroupData.WT_HCC9_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond5_HC=ttest2(GroupData.WT_HCC5_wholetrial, GroupData.WT_HCC10_wholetrial);
+
+STATS.stdwithin_noise_clear_wholetrial_cond1_pat=ttest2(GroupData.WT_patC1_wholetrial, GroupData.WT_patC6_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond2_pat=ttest2(GroupData.WT_patC2_wholetrial, GroupData.WT_patC7_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond3_pat=ttest2(GroupData.WT_patC3_wholetrial, GroupData.WT_patC8_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond4_pat=ttest2(GroupData.WT_patC4_wholetrial, GroupData.WT_patC9_wholetrial);
+STATS.stdwithin_noise_clear_wholetrial_cond5_pat=ttest2(GroupData.WT_patC5_wholetrial, GroupData.WT_patC10_wholetrial);
+
+
+%% (5)STATS comparing all noise trials (6-10) v all clear trials (1-5)
+% patients and controls
+Stdwithin_allcleartrials_HCs_pre=[GroupData.WT_HCC1_pre GroupData.WT_HCC2_pre GroupData.WT_HCC3_pre GroupData.WT_HCC4_pre GroupData.WT_HCC5_pre];
+Stdwithin_allnoisetrials_HCs_pre=[GroupData.WT_HCC6_pre GroupData.WT_HCC7_pre GroupData.WT_HCC8_pre GroupData.WT_HCC9_pre GroupData.WT_HCC10_pre];
+STATS.stdwithin_allnoise_vs_clear_HCs_pre=ttest2(Stdwithin_allcleartrials_HCs_pre,Stdwithin_allnoisetrials_HCs_pre);
+Stdwithin_allcleartrials_HCs_pre_data=nanmean(Stdwithin_allcleartrials_HCs_pre);
+Stdwithin_allnoisetrials_HCs_pre_data=nanmean(Stdwithin_allnoisetrials_HCs_pre);
+
+Stdwithin_allcleartrials_pats_pre=[GroupData.WT_patC1_pre GroupData.WT_patC2_pre GroupData.WT_patC3_pre GroupData.WT_patC4_pre GroupData.WT_patC5_pre];
+Stdwithin_allnoisetrials_pats_pre=[GroupData.WT_patC6_pre GroupData.WT_patC7_pre GroupData.WT_patC8_pre GroupData.WT_patC9_pre GroupData.WT_patC10_pre];
+STATS.stdwithin_allnoise_vs_clear_pats_pre=ttest2(Stdwithin_allcleartrials_pats_pre,Stdwithin_allnoisetrials_pats_pre);
+Stdwithin_allcleartrials_pats_pre_data=nanmean(Stdwithin_allcleartrials_pats_pre);
+Stdwithin_allnoisetrials_pats_pre_data=nanmean(Stdwithin_allnoisetrials_pats_pre);
+
+Stdwithin_allcleartrials_HCs_post=[GroupData.WT_HCC1_post GroupData.WT_HCC2_post GroupData.WT_HCC3_post GroupData.WT_HCC4_post GroupData.WT_HCC5_post];
+Stdwithin_allnoisetrials_HCs_post=[GroupData.WT_HCC6_post GroupData.WT_HCC7_post GroupData.WT_HCC8_post GroupData.WT_HCC9_post GroupData.WT_HCC10_post];
+STATS.stdwithin_allnoise_vs_clear_HCs_post=ttest2(Stdwithin_allcleartrials_HCs_post,Stdwithin_allnoisetrials_HCs_post);
+Stdwithin_allcleartrials_HCs_post_data=nanmean(Stdwithin_allcleartrials_HCs_post);
+Stdwithin_allnoisetrials_HCs_post_data=nanmean(Stdwithin_allnoisetrials_HCs_post);
+
+Stdwithin_allcleartrials_pats_post=[GroupData.WT_patC1_post GroupData.WT_patC2_post GroupData.WT_patC3_post GroupData.WT_patC4_post GroupData.WT_patC5_post];
+Stdwithin_allnoisetrials_pats_post=[GroupData.WT_patC6_post GroupData.WT_patC7_post GroupData.WT_patC8_post GroupData.WT_patC9_post GroupData.WT_patC10_post];
+STATS.stdwithin_allnoise_vs_clear_pats_post=ttest2(Stdwithin_allcleartrials_pats_post,Stdwithin_allnoisetrials_pats_post);
+Stdwithin_allcleartrials_pats_post_data=nanmean(Stdwithin_allcleartrials_pats_post);
+Stdwithin_allnoisetrials_pats_post_data=nanmean(Stdwithin_allnoisetrials_pats_post);
+
+Stdwithin_allcleartrials_HCs_wholetrial=[GroupData.WT_HCC1_wholetrial GroupData.WT_HCC2_wholetrial GroupData.WT_HCC3_wholetrial GroupData.WT_HCC4_wholetrial GroupData.WT_HCC5_wholetrial];
+Stdwithin_allnoisetrials_HCs_wholetrial=[GroupData.WT_HCC6_wholetrial GroupData.WT_HCC7_wholetrial GroupData.WT_HCC8_wholetrial GroupData.WT_HCC9_wholetrial GroupData.WT_HCC10_wholetrial];
+STATS.stdwithin_allnoise_vs_clear_HCs_wholetrial=ttest2(Stdwithin_allcleartrials_HCs_wholetrial,Stdwithin_allnoisetrials_HCs_wholetrial);
+Stdwithin_allcleartrials_HCs_wholetrial_data=nanmean(Stdwithin_allcleartrials_HCs_wholetrial);
+Stdwithin_allnoisetrials_HCs_wholetrial_data=nanmean(Stdwithin_allnoisetrials_HCs_wholetrial);
+
+Stdwithin_allcleartrials_pats_wholetrial=[GroupData.WT_patC1_wholetrial GroupData.WT_patC2_wholetrial GroupData.WT_patC3_wholetrial GroupData.WT_patC4_wholetrial GroupData.WT_patC5_wholetrial];
+Stdwithin_allnoisetrials_pats_wholetrial=[GroupData.WT_patC6_wholetrial GroupData.WT_patC7_wholetrial GroupData.WT_patC8_wholetrial GroupData.WT_patC9_wholetrial GroupData.WT_patC10_wholetrial];
+STATS.stdwithin_allnoise_vs_clear_pats_wholetrial=ttest2(Stdwithin_allcleartrials_pats_wholetrial,Stdwithin_allnoisetrials_pats_wholetrial);
+Stdwithin_allcleartrials_pats_wholetrial_data=nanmean(Stdwithin_allcleartrials_pats_wholetrial);
+Stdwithin_allnoisetrials_pats_wholetrial_data=nanmean(Stdwithin_allnoisetrials_pats_wholetrial);
+
+%% amp data
+
+Stdwithin_allcleartrials_HCs_pre_AMP_clear=[GroupData.WT_HCC1_pre_AMP GroupData.WT_HCC2_pre_AMP GroupData.WT_HCC3_pre_AMP GroupData.WT_HCC4_pre_AMP GroupData.WT_HCC5_pre_AMP];
+Stdwithin_allnoisetrials_HCs_pre_AMP_clear=[GroupData.WT_HCC6_pre_AMP GroupData.WT_HCC7_pre_AMP GroupData.WT_HCC8_pre_AMP GroupData.WT_HCC9_pre_AMP GroupData.WT_HCC10_pre_AMP];
+STATS.stdwithin_allnoise_vs_clear_HCs_pre_AMP_clear=ttest2(Stdwithin_allcleartrials_HCs_pre_AMP_clear,Stdwithin_allnoisetrials_HCs_pre_AMP_clear);
+Stdwithin_allcleartrials_HCs_pre_AMP_clear_data=nanmean(Stdwithin_allcleartrials_HCs_pre_AMP_clear);
+Stdwithin_allnoisetrials_HCs_pre_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_HCs_pre_AMP_clear);
+
+Stdwithin_allcleartrials_pats_pre_AMP_clear=[GroupData.WT_patC1_pre_AMP GroupData.WT_patC2_pre_AMP GroupData.WT_patC3_pre_AMP GroupData.WT_patC4_pre_AMP GroupData.WT_patC5_pre_AMP];
+Stdwithin_allnoisetrials_pats_pre_AMP_clear=[GroupData.WT_patC6_pre_AMP GroupData.WT_patC7_pre_AMP GroupData.WT_patC8_pre_AMP GroupData.WT_patC9_pre_AMP GroupData.WT_patC10_pre_AMP];
+STATS.stdwithin_allnoise_vs_clear_pats_pre_AMP_clear=ttest2(Stdwithin_allcleartrials_pats_pre_AMP_clear,Stdwithin_allnoisetrials_pats_pre_AMP_clear);
+Stdwithin_allcleartrials_pats_pre_AMP_clear_data=nanmean(Stdwithin_allcleartrials_pats_pre_AMP_clear);
+Stdwithin_allnoisetrials_pats_pre_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_pats_pre_AMP_clear);
+
+Stdwithin_allcleartrials_HCs_post_AMP_clear=[GroupData.WT_HCC1_post_AMP GroupData.WT_HCC2_post_AMP GroupData.WT_HCC3_post_AMP GroupData.WT_HCC4_post_AMP GroupData.WT_HCC5_post_AMP];
+Stdwithin_allnoisetrials_HCs_post_AMP_clear=[GroupData.WT_HCC6_post_AMP GroupData.WT_HCC7_post_AMP GroupData.WT_HCC8_post_AMP GroupData.WT_HCC9_post_AMP GroupData.WT_HCC10_post_AMP];
+STATS.stdwithin_allnoise_vs_clear_HCs_post_AMP_clear=ttest2(Stdwithin_allcleartrials_HCs_post_AMP_clear,Stdwithin_allnoisetrials_HCs_post_AMP_clear);
+Stdwithin_allcleartrials_HCs_post_AMP_clear_data=nanmean(Stdwithin_allcleartrials_HCs_post_AMP_clear);
+Stdwithin_allnoisetrials_HCs_post_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_HCs_post_AMP_clear);
+
+Stdwithin_allcleartrials_pats_post_AMP_clear=[GroupData.WT_patC1_post_AMP GroupData.WT_patC2_post_AMP GroupData.WT_patC3_post_AMP GroupData.WT_patC4_post_AMP GroupData.WT_patC5_post_AMP];
+Stdwithin_allnoisetrials_pats_post_AMP_clear=[GroupData.WT_patC6_post_AMP GroupData.WT_patC7_post_AMP GroupData.WT_patC8_post_AMP GroupData.WT_patC9_post_AMP GroupData.WT_patC10_post_AMP];
+STATS.stdwithin_allnoise_vs_clear_pats_post_AMP_clear=ttest2(Stdwithin_allcleartrials_pats_post_AMP_clear,Stdwithin_allnoisetrials_pats_post_AMP_clear);
+Stdwithin_allcleartrials_pats_post_AMP_clear_data=nanmean(Stdwithin_allcleartrials_pats_post_AMP_clear);
+Stdwithin_allnoisetrials_pats_post_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_pats_post_AMP_clear);
+
+Stdwithin_allcleartrials_HCs_wholetrial_AMP_clear=[GroupData.WT_HCC1_wholetrial_AMP GroupData.WT_HCC2_wholetrial_AMP GroupData.WT_HCC3_wholetrial_AMP GroupData.WT_HCC4_wholetrial_AMP GroupData.WT_HCC5_wholetrial_AMP];
+Stdwithin_allnoisetrials_HCs_wholetrial_AMP_clear=[GroupData.WT_HCC6_wholetrial_AMP GroupData.WT_HCC7_wholetrial_AMP GroupData.WT_HCC8_wholetrial_AMP GroupData.WT_HCC9_wholetrial_AMP GroupData.WT_HCC10_wholetrial_AMP];
+STATS.stdwithin_allnoise_vs_clear_HCs_wholetrial_AMP_clear=ttest2(Stdwithin_allcleartrials_HCs_wholetrial_AMP_clear,Stdwithin_allnoisetrials_HCs_wholetrial_AMP_clear);
+Stdwithin_allcleartrials_HCs_wholetrial_AMP_clear_data=nanmean(Stdwithin_allcleartrials_HCs_wholetrial_AMP_clear);
+Stdwithin_allnoisetrials_HCs_wholetrial_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_HCs_wholetrial_AMP_clear);
+
+Stdwithin_allcleartrials_pats_wholetrial_AMP_clear=[GroupData.WT_patC1_wholetrial_AMP GroupData.WT_patC2_wholetrial_AMP GroupData.WT_patC3_wholetrial_AMP GroupData.WT_patC4_wholetrial_AMP GroupData.WT_patC5_wholetrial_AMP];
+Stdwithin_allnoisetrials_pats_wholetrial_AMP_clear=[GroupData.WT_patC6_wholetrial_AMP GroupData.WT_patC7_wholetrial_AMP GroupData.WT_patC8_wholetrial_AMP GroupData.WT_patC9_wholetrial_AMP GroupData.WT_patC10_wholetrial_AMP];
+STATS.stdwithin_allnoise_vs_clear_pats_wholetrial_AMP_clear=ttest2(Stdwithin_allcleartrials_pats_wholetrial_AMP_clear,Stdwithin_allnoisetrials_pats_wholetrial_AMP_clear);
+Stdwithin_allcleartrials_pats_wholetrial_AMP_clear_data=nanmean(Stdwithin_allcleartrials_pats_wholetrial_AMP_clear);
+Stdwithin_allnoisetrials_pats_wholetrial_AMP_clear_data=nanmean(Stdwithin_allnoisetrials_pats_wholetrial_AMP_clear);
+
+
+%% post anova t tests
+STATS.cond1_pre_ttest_stdwithin=ttest2(GroupData.WT_patC1_pre, GroupData.WT_HCC1_pre);
+STATS.cond2_pre_ttest_stdwithin=ttest2(GroupData.WT_patC2_pre, GroupData.WT_HCC2_pre);
+STATS.cond3_pre_ttest_stdwithin=ttest2(GroupData.WT_patC3_pre, GroupData.WT_HCC3_pre);
+STATS.cond4_pre_ttest_stdwithin=ttest2(GroupData.WT_patC4_pre, GroupData.WT_HCC4_pre);
+STATS.cond5_pre_ttest_stdwithin=ttest2(GroupData.WT_patC5_pre, GroupData.WT_HCC5_pre);
+STATS.cond6_pre_ttest_stdwithin=ttest2(GroupData.WT_patC6_pre, GroupData.WT_HCC6_pre);
+STATS.cond7_pre_ttest_stdwithin=ttest2(GroupData.WT_patC7_pre, GroupData.WT_HCC7_pre);
+STATS.cond8_pre_ttest_stdwithin=ttest2(GroupData.WT_patC8_pre, GroupData.WT_HCC8_pre);
+STATS.cond9_pre_ttest_stdwithin=ttest2(GroupData.WT_patC9_pre, GroupData.WT_HCC9_pre);
+STATS.cond10_pre_ttest_stdwithin=ttest2(GroupData.WT_patC10_pre, GroupData.WT_HCC10_pre);
+
+STATS.cond1_post_ttest_stdwithin=ttest2(GroupData.WT_patC1_post, GroupData.WT_HCC1_post);
+STATS.cond2_post_ttest_stdwithin=ttest2(GroupData.WT_patC2_post, GroupData.WT_HCC2_post);
+STATS.cond3_post_ttest_stdwithin=ttest2(GroupData.WT_patC3_post, GroupData.WT_HCC3_post);
+STATS.cond4_post_ttest_stdwithin=ttest2(GroupData.WT_patC4_post, GroupData.WT_HCC4_post);
+STATS.cond5_post_ttest_stdwithin=ttest2(GroupData.WT_patC5_post, GroupData.WT_HCC5_post);
+STATS.cond6_post_ttest_stdwithin=ttest2(GroupData.WT_patC6_post, GroupData.WT_HCC6_post);
+STATS.cond7_post_ttest_stdwithin=ttest2(GroupData.WT_patC7_post, GroupData.WT_HCC7_post);
+STATS.cond8_post_ttest_stdwithin=ttest2(GroupData.WT_patC8_post, GroupData.WT_HCC8_post);
+STATS.cond9_post_ttest_stdwithin=ttest2(GroupData.WT_patC9_post, GroupData.WT_HCC9_post);
+STATS.cond10_post_ttest_stdwithin=ttest2(GroupData.WT_patC10_post, GroupData.WT_HCC10_post);
+
+% comparisons of interest
+STATS.stdwithin_allnoise_vs_clear_HCs_pre
+STATS.stdwithin_allnoise_vs_clear_pats_pre
